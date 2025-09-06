@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wanted Poster</title>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ewert);
+    @import url(https://fonts.googleapis.com/css?family=Ultra);
+    body{
+      background-image:url('img/wood.jpg');
+      display:flex ;
+        justify-content: center; /* */
+        padding: 20px;
+    }
+    .poster{
+      background-image:url('img/paper.jpg') ;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      justify-items: center;
+      align-items: center;
+      width: 488px ;
+      height: 640px;
+    -webkit-box-shadow: 11px 5px 15px 5px #000000; 
+      box-shadow: 11px 5px 15px 5px #000000;
+     
+    }
+    .header{
+        font-family: 'Ewert','consolas';
+}
+.x{
+    color: #291200;
+    font-family: 'Ewert';
+    font-size: 44pt;
+    margin: 10px 0 ;
+}
+.subheading{
+    color: #291200;
+    font-family: 'Ultra';
+    font-size: 20px;
+    margin: 5px 0 ;
+    
+}
+.name{
+    color: #291200;
+    font-family: 'Ultra';
+    font-size: 30px;
+    margin: 5px 0 ;
+}
+.description{
+    color: #291200;
+     font-family: 'Ultra';
+    font-size: 15px;
+    margin: 5px 0 ;
+}
+.reward{
+     color: #291200;
+     font-family: 'Ultra';
+    font-size: 25px;
+    margin: 5px 0 ;
+}
+#price{
+    color: #291200;
+    font-family: 'Ultra';
+    font-size: 30px;
+    margin: 5px 0 ;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+.mugshot{
+    padding: 10px;
+    
+}
+  </style>
+    
+  
+</head>
+
+<body >
+    
+  <div class="poster">
+    
+    <p class = "x" >WANTED</p>
+    <p class="subheading">Dead or Alive </p>
+    
+    <center><img border = 2px solid id="mugshot" src="img/criminal.png" width="300" height="325" /></center>
+    <p class="name">Billy the Kid</p>
+    <p class="description"><em>Armed & very dangerous</em> </p>
+    <p class = "reward">Reward</p>
+    <div id="price">$50.000   </div>
+  </div>
+</body>
+
+</html>

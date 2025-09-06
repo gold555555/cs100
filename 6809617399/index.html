@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <title>My Shop</title>
+    <link rel="stylesheet" href="mystyle/mystyle.css">
+</head>
+
+<body>
+   <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <div class="overall">
+            <video class="first" autoplay muted loop>
+                <source src="resources/coffeecup.mp4" type="video/mp4">
+            </video>
+            <p class="header"><em>IVORY COFFEE</em></p>
+            <p class="header1"><em>SHOP</em></p>
+        </div>
+    </section>
+
+    <div class="arrow">⌄</div>
+    
+
+    <section id="about">
+        <div class="content">
+            <img class="img1" src="resources/Black Ivory1.jpg" alt="Black Ivory1">
+            <video class="img1" controls autoplay loop  >
+                <source src="resources/myshop.mp4" type="video/mp4">
+            </video>
+        
+        </div>
+            <p class="text">Black Ivory Coffee is special not only for its taste,
+                but also for its rarity, which makes <strong> a symbol of luxury.</strong>
+                Producing this coffee requires up to <u>33 kilograms of coffee cherries to yield just 1 kilogram of roasted coffee</u>,
+                since many beans are damaged or lost during the elephant’s digestive process. Each year,
+                only about 225 kilograms are produced, <b>making Black Ivory Coffee one of the rarest coffees in the world.</b>
+            </p>
+        
+    </section>
+
+    <section id="product">
+        <div class="sell-container">
+        
+            <div class="product">
+                <img src="resources/sell1.webp" alt="Black Ivory Coffee 35g">
+                <h3>Black Ivory Coffee 35 กรัม</h3>
+                <p>ราคา: 2500  บาท/ซอง</p>
+                <label>จำนวน: <input type="number" id="qty1" value="1" min="1" onchange="updatePrice(1)"></label> <!--แท็กใหม่1-->
+                <p>รวม: <span id="total1">2500</span> บาท</p>
+                <button onclick="buy(1)">ซื้อเลย</button> <!--แท็กใหม่2-->
+            </div>
+        
+            <div class="product">
+                <img src="resources/sell2" alt="Black Ivory Coffee 420g">
+                <h3>Black Ivory Coffee 420 กรัม</h3>
+                <p>ราคา: 28000 บาท/แพ็ค</p>
+                <label>จำนวน: <input type="number" id="qty2" value="1" min="1" onchange="updatePrice(2)"></label>
+                <p>รวม: <span id="total2">28000</span> บาท</p>
+                <button onclick="buy(2)">ซื้อเลย</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <footer><!--แท็กใหม่3-->
+            <p>ติดต่อเรา: Line @goldstar099 | อีเมล: goldstart.2112@gmail.com | โทร: 099-118-6744</p>
+            <p>Copyright © 2025 IVORY COFFEE SHOP. สงวนลิขสิทธิ์</p>
+        </footer>
+    </section>
+
+    <div>
+        <script>
+            const basePrice = {
+                1: 2500,
+                2: 28000
+            };
+            function updatePrice(id) {
+                let qty = document.getElementById("qty" + id).value;
+                let total = basePrice[id] * qty;
+                document.getElementById("total" + id).innerText = total.toLocaleString();
+            }
+            function buy(id) {
+                let qty = document.getElementById("qty" + id).value;
+                let total = basePrice[id] * qty;
+                alert("คุณได้สั่งซื้อสินค้า จำนวน " + qty + " ชิ้น รวม " + total.toLocaleString() + " บาท");
+            }
+        </script>
+        <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector("nav");
+            let fade = 1 - window.scrollY / 200;
+            if (fade < 0) fade = 0;
+            navbar.style.opacity = fade;});
+            </script>
+    </div>
+
+</body>
+</html>
